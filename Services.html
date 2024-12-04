@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenny Portfolio</title>
+    <style>
+        /* General Styles */
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: #000; /* Black background */
+    color: #7aa2c3; /* Neon green text */
+    overflow-x: hidden;
+}
+
+
+/* Header */
+.header {
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid #7aa2c3;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color:#7aa2c3;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #8fb8bf;
+}
+
+/* Sections */
+.hero, .about, .projects, .contact {
+    padding: 4rem 2rem;
+    text-align: center;
+    max-width: 80%;
+    margin: 2rem auto;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #7aa2c3;
+    border-radius: 10px;
+}
+
+.hero h1, .about h2, .projects h2, .contact h2 {
+    color: #7aa2c3;
+    text-shadow: 0 0 10px #7aa2c3;
+    margin-bottom: 1rem;
+}
+
+/* Background Animation */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 35px solid #7aa2c3;
+    opacity: 0.6;
+    animation: float 12s linear infinite, sway 5s ease-in-out infinite;
+}
+
+/* Keyframe Animations */
+@keyframes float {
+    0% { transform: translateY(100vh) scale(0.5) rotate(0deg); opacity: 0.6; }
+    50% { transform: translateY(50vh) scale(1) rotate(180deg); opacity: 1; }
+    100% { transform: translateY(-20vh) scale(0.8) rotate(360deg); opacity: 0.3; }
+}
+
+@keyframes sway {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(30px); }
+}
+
+/* Triangle Instances */
+.triangle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 10s; }
+.triangle:nth-child(2) { left: 30%; animation-delay: 2s; animation-duration: 8s; }
+.triangle:nth-child(3) { left: 50%; animation-delay: 4s; animation-duration: 12s; }
+.triangle:nth-child(4) { left: 70%; animation-delay: 1s; animation-duration: 14s; }
+.triangle:nth-child(5) { left: 90%; animation-delay: 3s; animation-duration: 9s; }
+
+    
+        /* Services Section */
+.services {
+    text-align: center;
+    padding: 4rem 2rem;
+    max-width: 90%;
+    margin: 2rem auto;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #7aa2c3;
+    border-radius: 10px;
+}
+
+.services h2 {
+    color: #7aa2c3;
+    text-shadow: 0 0 10px #7aa2c3;
+    margin-bottom: 1rem;
+}
+
+.services p {
+    color: #8fb8bf;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.services strong {
+    font-size: 20px;
+}
+
+/* Service Cards */
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.service-card {
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #7aa2c3;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #7aa2c3;
+    width: 300px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #7aa2c3;
+}
+
+.service-card i {
+    font-size: 15px;
+    color: #b3f6ff;
+    margin-bottom: 1rem;
+}
+
+.service-card strong{
+    font-size: 25px;
+    color:#8fb8bf;
+}
+
+.service-card h3 {
+    font-size: 25px;
+    color: #8fb8bf;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: #b3f6ff;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+    </style>
+    
+</head>
+<body>
+    <div class="background-animation">
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+    </div>
+
+    <header class="header">
+        <nav class="navbar">
+            <h1>KennShot</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <p>Welcome to the <strong>[name]</strong> page. Whether you're looking for captivating visuals or professional photo editing, you've come to the right place. Here's how I can bring your vision to life:</p><br><br>
+
+        <div class="service-cards">
+            <!-- Digital Arts -->
+            <div class="service-card">
+                <i class="fas fa-palette"></i>
+                <h2>Event Photography</h2><br><br>
+                    <p>Capturing the most memorable moments of your events with precision and creativity.</p><br>
+            </div>
+
+            <!-- Video Editing -->
+            <div class="service-card">
+                <i class="fas fa-video"></i>
+                <h2>Portrait Photography</h2><br><br>
+                    <p>Personalized portraits that highlight your unique personality and style.</p><br>
+            </div>
+
+            <!-- Videography -->
+            <div class="service-card">
+                <i class="fas fa-film"></i>
+                <h2>Commercial Photography</h2><br><br>
+                    <p>Professional images that elevate your brand and showcase your products or services.</p><br>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-film"></i>
+                <h2>Photo Editing</h2><br><br>
+                <p>Enhancing images with expert editing to bring out the best in every shot.</p>
+            </div>
+        </div>
+    </section>
+
+   
+</body>
+</html>

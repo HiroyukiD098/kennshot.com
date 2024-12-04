@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenny Portfolio</title>
+    <style>
+              /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: #000; /* Black background */
+    color: #7aa2c3; /* Neon green text */
+    overflow-x: hidden;
+}
+
+
+/* Header */
+.header {
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid #7aa2c3;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color:#7aa2c3;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #8fb8bf;
+}
+
+/* Sections */
+.hero, .about, .projects, .contact {
+    padding: 4rem 2rem;
+    text-align: center;
+    max-width: 80%;
+    margin: 2rem auto;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #7aa2c3;
+    border-radius: 10px;
+}
+
+.hero h1, .about h2, .projects h2, .contact h2 {
+    color: #7aa2c3;
+    text-shadow: 0 0 10px #7aa2c3;
+    margin-bottom: 1rem;
+}
+
+/* Background Animation */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 35px solid #7aa2c3;
+    opacity: 0.6;
+    animation: float 12s linear infinite, sway 5s ease-in-out infinite;
+}
+
+/* Keyframe Animations */
+@keyframes float {
+    0% { transform: translateY(100vh) scale(0.5) rotate(0deg); opacity: 0.6; }
+    50% { transform: translateY(50vh) scale(1) rotate(180deg); opacity: 1; }
+    100% { transform: translateY(-20vh) scale(0.8) rotate(360deg); opacity: 0.3; }
+}
+
+@keyframes sway {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(30px); }
+}
+
+/* Triangle Instances */
+.triangle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 10s; }
+.triangle:nth-child(2) { left: 30%; animation-delay: 2s; animation-duration: 8s; }
+.triangle:nth-child(3) { left: 50%; animation-delay: 4s; animation-duration: 12s; }
+.triangle:nth-child(4) { left: 70%; animation-delay: 1s; animation-duration: 14s; }
+.triangle:nth-child(5) { left: 90%; animation-delay: 3s; animation-duration: 9s; }
+
+
+/* Project Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of items */
+    gap: 1rem; /* Space between items */
+    justify-content: center;
+    margin: 2rem auto;
+    max-width: 90%;
+}
+
+/* Images and Videos */
+.gallery img, .gallery video {
+    width: 250px;
+    height: 250px;
+    object-fit: cover; /* Ensures images/videos fit neatly */
+    border-radius: 10px;
+    border: 3px solid #7aa2c3;
+    box-shadow: 0 0 10px #7aa2c3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Zoom Effect */
+.gallery img:hover, .gallery video:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 0 20px #7aa2c3;
+}
+
+/* Headings for Sections */
+.projects h3 {
+    color: #8fb8bf;
+    margin-top: 2rem;
+    text-shadow: 0 0 10px #7aa2c3;
+    text-align: center;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="background-animation">
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+    </div>
+
+    <header class="header">
+        <nav class="navbar">
+            <h1>KennShot</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutpage.html">About</a></li>
+                <li><a href="Projects.html">Projects</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="projects">
+        <h2>My Projects</h2>
+
+        <!-- Digital Artworks -->
+        <h3>Photography</h3>
+        <div class="gallery">
+            <img src="pj1" alt="Digital Artwork 1">
+            <img src="pj2" alt="Digital Artwork 2">
+            <img src="pj3" alt="Digital Artwork 3">
+            <img src="pj4" alt="Digital Artwork 4">
+            <img src="pj5" alt="Digital Artwork 5">
+            <img src="pj6" alt="Digital Artwork 6">
+            <img src="pj7" alt="Digital Artwork 7">
+            <img src="pj8" alt="Digital Artwork 8">
+            <img src="pj9" alt="Digital Artwork 9">
+            <img src="pj10" alt="Digital Artwork 10">
+            <img src="pj11" alt="Digital Artwork 11">
+            <img src="pj12" alt="Digital Artwork 12">
+            <img src="pj13" alt="Digital Artwork 13">
+            <img src="pj14" alt="Digital Artwork 14">
+            <img src="pj15" alt="Digital Artwork 15">
+            <img src="pj16" alt="Digital Artwork 16">
+        </div>
+
+        
+</body>
+</html>
+
+<script>
+    // JavaScript for handling multiple lightbox images dynamically
+    document.querySelectorAll('.gallery img').forEach(img => {
+        img.addEventListener('click', () => {
+            const lightbox = document.createElement('div');
+            lightbox.id = 'lightbox';
+            lightbox.style.position = 'fixed';
+            lightbox.style.top = 0;
+            lightbox.style.left = 0;
+            lightbox.style.width = '100%';
+            lightbox.style.height = '100%';
+            lightbox.style.background = 'rgba(0, 0, 0, 0.8)';
+            lightbox.style.display = 'flex';
+            lightbox.style.justifyContent = 'center';
+            lightbox.style.alignItems = 'center';
+            lightbox.style.zIndex = '1000';
+            lightbox.addEventListener('click', () => {
+                lightbox.remove();
+            });
+
+            const imgClone = document.createElement('img');
+            imgClone.src = img.src;
+            imgClone.style.maxWidth = '90%';
+            imgClone.style.maxHeight = '90%';
+            imgClone.style.border = '4px solid white';
+            imgClone.style.borderRadius = '8px';
+
+            lightbox.appendChild(imgClone);
+            document.body.appendChild(lightbox);
+        });
+    });
+</script>
